@@ -8,26 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1a7c005-f139-44d0-a6af-3b40ac5017d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DesignPatternsParte01/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Account.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Bold.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Budget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Conservative.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Enums/TypeInvestments.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/MakeInvestment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Moderate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Taxes/ICCC.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Taxes/ICMS.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/Taxes/ISS.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Classes/TaxesCalculator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/DesignPatternsPart01.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Interfaces/Investment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Interfaces/Tax.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatternsPart01/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DesignPatternsParte01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DesignPatternsParte01/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +20,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DesignPatternsPart01/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/formation_csharp/design-patterns-01/DesignPatternsParte01/DesignPatternsPart01/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 4
 }]]></component>
@@ -115,14 +101,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692135148868</updated>
-      <workItem from="1692135153210" duration="6748000" />
+      <workItem from="1692135153210" duration="7347000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit.">
+      <option name="closed" value="true" />
+      <created>1692142616600</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692142616600</updated>
+    </task>
+    <task id="LOCAL-00002" summary="organize codes.">
+      <option name="closed" value="true" />
+      <created>1692142688627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692142688627</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="initial commit." />
+    <MESSAGE value="organize codes." />
+    <option name="LAST_COMMIT_MESSAGE" value="organize codes." />
   </component>
 </project>

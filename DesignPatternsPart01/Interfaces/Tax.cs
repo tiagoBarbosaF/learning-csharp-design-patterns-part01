@@ -1,4 +1,6 @@
-﻿namespace DesignPatternsPart01;
+﻿using DesignPatternsPart01.Classes;
+
+namespace DesignPatternsPart01;
 
 public interface Tax
 {
