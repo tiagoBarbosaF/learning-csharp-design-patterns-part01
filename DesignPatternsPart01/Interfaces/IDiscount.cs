@@ -2,9 +2,9 @@
 
 namespace DesignPatternsPart01.Interfaces;
 
-public interface Discount
+public interface IDiscount
 {
     double Discounting(Budget budget);
 
-    Discount Next { get; set; }
+    IDiscount Next { get; set; }
 }

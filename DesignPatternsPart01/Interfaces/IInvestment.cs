@@ -2,7 +2,7 @@
 
 namespace DesignPatternsPart01.Interfaces;
 
-public interface Response
+public interface IInvestment
 {
-    void Respond(Requisition requisition, Account account);
+    double Calculate(Account account);
 }

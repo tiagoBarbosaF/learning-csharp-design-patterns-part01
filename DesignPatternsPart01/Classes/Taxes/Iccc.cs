@@ -1,6 +1,8 @@
-﻿namespace DesignPatternsPart01.Classes.Taxes;
+﻿using DesignPatternsPart01.Interfaces;
 
-public class ICCC : Tax
+namespace DesignPatternsPart01.Classes.Taxes;
+
+public class Iccc : ITax
 {
     public double Calculate(Budget budget)
     {
@@ -13,7 +15,7 @@ public class ICCC : Tax
         return budget.Value * 0.08 + 30;
     }
 
-    public void PerformsCalculation(string type, Budget budget, Tax tax)
+    public void PerformsCalculation(string type, Budget budget, ITax tax)
     {
         Console.WriteLine($"{type}: {tax.Calculate(budget):F}");
     }

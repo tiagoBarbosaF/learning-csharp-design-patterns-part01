@@ -4,7 +4,7 @@ namespace DesignPatternsPart01.Classes;
 
 public class MakeInvestment
 {
-    public void Investment(Account account, Investment investment)
+    public void Investment(Account account, IInvestment investment)
     {
         var result = investment.Calculate(account);
 

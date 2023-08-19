@@ -2,8 +2,8 @@
 
 namespace DesignPatternsPart01.Classes;
 
-public class NoDiscount : Discount
+public class NoDiscount : IDiscount
 {
-    public Discount Next { get; set; }
+    public IDiscount Next { get; set; }
     public double Discounting(Budget budget) => 0;
 }

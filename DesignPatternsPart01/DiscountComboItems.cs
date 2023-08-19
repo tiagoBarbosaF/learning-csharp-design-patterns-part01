@@ -3,9 +3,9 @@ using DesignPatternsPart01.Interfaces;
 
 namespace DesignPatternsPart01;
 
-public class DiscountComboItems : Discount
+public class DiscountComboItems : IDiscount
 {
-    public Discount Next { get; set; }
+    public IDiscount Next { get; set; }
 
     public bool Exists(string itemName, Budget budget)
     {

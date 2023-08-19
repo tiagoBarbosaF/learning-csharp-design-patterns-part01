@@ -4,11 +4,11 @@ using DesignPatternsPart01.Interfaces;
 
 namespace DesignPatternsPart01.Classes;
 
-public class PercentResponse : Response
+public class PercentResponse : IResponse
 {
-    public Response AnotherResponse { get; private set; }
+    public IResponse AnotherResponse { get; private set; }
 
-    public PercentResponse(Response anotherResponse)
+    public PercentResponse(IResponse anotherResponse)
     {
         AnotherResponse = anotherResponse;
     }

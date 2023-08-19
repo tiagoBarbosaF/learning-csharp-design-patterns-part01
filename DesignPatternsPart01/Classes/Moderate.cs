@@ -2,7 +2,7 @@
 
 namespace DesignPatternsPart01.Classes;
 
-public class Moderate : Investment
+public class Moderate : IInvestment
 {
     private Random _random;
 

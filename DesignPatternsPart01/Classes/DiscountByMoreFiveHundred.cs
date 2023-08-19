@@ -2,9 +2,9 @@
 
 namespace DesignPatternsPart01.Classes;
 
-public class DiscountByMoreFiveHundred : Discount
+public class DiscountByMoreFiveHundred : IDiscount
 {
-    public Discount Next { get; set; }
+    public IDiscount Next { get; set; }
 
     public double Discounting(Budget budget)
     {

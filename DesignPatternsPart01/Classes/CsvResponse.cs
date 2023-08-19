@@ -3,11 +3,11 @@ using DesignPatternsPart01.Interfaces;
 
 namespace DesignPatternsPart01.Classes;
 
-public class CsvResponse : Response
+public class CsvResponse : IResponse
 {
-    public Response AnotherResponse { get; private set; }
+    public IResponse AnotherResponse { get; private set; }
 
-    public CsvResponse(Response anotherResponse)
+    public CsvResponse(IResponse anotherResponse)
     {
         AnotherResponse = anotherResponse;
     }

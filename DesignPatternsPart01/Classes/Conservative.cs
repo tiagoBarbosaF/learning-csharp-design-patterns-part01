@@ -2,7 +2,7 @@
 
 namespace DesignPatternsPart01.Classes;
 
-public class Conservative : Investment
+public class Conservative : IInvestment
 {
     public double Calculate(Account account)
     {

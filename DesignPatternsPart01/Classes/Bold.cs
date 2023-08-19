@@ -2,7 +2,7 @@
 
 namespace DesignPatternsPart01.Classes;
 
-public class Bold : Investment
+public class Bold : IInvestment
 {
     private Random _random;
 

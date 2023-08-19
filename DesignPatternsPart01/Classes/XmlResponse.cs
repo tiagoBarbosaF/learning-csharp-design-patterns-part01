@@ -3,11 +3,11 @@ using DesignPatternsPart01.Interfaces;
 
 namespace DesignPatternsPart01.Classes;
 
-public class XmlResponse : Response
+public class XmlResponse : IResponse
 {
-    public Response AnotherResponse { get; private set; }
+    public IResponse AnotherResponse { get; private set; }
 
-    public XmlResponse(Response anotherResponse)
+    public XmlResponse(IResponse anotherResponse)
     {
         AnotherResponse = anotherResponse;
     }
