@@ -1,22 +1,22 @@
-﻿using DesignPatternsPart01.Interfaces;
+﻿namespace DesignPatternsPart01.Classes.Taxes;
 
-namespace DesignPatternsPart01.Classes.Taxes;
-
-public class Iccc : ITax
+public class Iccc : Tax
 {
-    public double Calculate(Budget budget)
+    public Iccc(Tax tax) : base(tax)
     {
-        if (budget.Value < 1000)
-            return budget.Value * 0.05;
-        
-        if (budget.Value is >= 1000 and <= 3000)
-            return budget.Value * 0.07;
-        
-        return budget.Value * 0.08 + 30;
     }
 
-    public void PerformsCalculation(string type, Budget budget, ITax tax)
+    public Iccc() : base()
     {
-        Console.WriteLine($"{type}: {tax.Calculate(budget):F}");
+    }
+
+    public override double Calculate(Budget budget)
+    {
+        return budget.Value switch
+        {
+            < 1000 => budget.Value * 0.05,
+            >= 1000 and <= 3000 => budget.Value * 0.07,
+            _ => budget.Value * 0.08 + 30
+        };
     }
 }

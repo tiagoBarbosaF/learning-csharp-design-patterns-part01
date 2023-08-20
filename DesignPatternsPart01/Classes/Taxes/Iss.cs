@@ -1,13 +1,14 @@
-﻿using DesignPatternsPart01.Interfaces;
+﻿namespace DesignPatternsPart01.Classes.Taxes;
 
-namespace DesignPatternsPart01.Classes.Taxes;
-
-public class Iss : ITax
+public class Iss : Tax
 {
-    public double Calculate(Budget budget) => budget.Value * 0.06;
-    
-    public void PerformsCalculation(string type, Budget budget, ITax tax)
+    public Iss(Tax tax) : base(tax)
     {
-        Console.WriteLine($"{type}: {tax.Calculate(budget):F}");
     }
+
+    public Iss() : base()
+    {
+    }
+
+    public override double Calculate(Budget budget) => budget.Value * 0.06 + CalculateOtherTax(budget);
 }
