@@ -12,11 +12,10 @@
         <Content Include="..\.dockerignore">
             <Link>.dockerignore</Link>
         </Content>
-
         <Compile Remove="Interfaces\IHeaderFooter.cs"/>
         <Compile Remove="Classes\Templates\TemplateComplexReport.cs"/>
         <Compile Remove="Classes\Templates\TemplateSimpleReport.cs"/>
-
+        <Folder Include="Classes\Accounts\States\"/>
     </ItemGroup>
 
 

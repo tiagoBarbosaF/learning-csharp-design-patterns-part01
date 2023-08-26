@@ -10,9 +10,9 @@ public abstract class TemplateConditionalTax : Tax
     {
     }
 
-    public override double Calculate(Budget budget) => MustUseMaxTax(budget) ? MaxTax(budget) + CalculateOtherTax(budget) : MinimalTax(budget);
+    public override double Calculate(Budget.Budget budget) => MustUseMaxTax(budget) ? MaxTax(budget) + CalculateOtherTax(budget) : MinimalTax(budget);
 
-    protected abstract bool MustUseMaxTax(Budget budget);
-    protected abstract double MaxTax(Budget budget);
-    protected abstract double MinimalTax(Budget budget);
+    protected abstract bool MustUseMaxTax(Budget.Budget budget);
+    protected abstract double MaxTax(Budget.Budget budget);
+    protected abstract double MinimalTax(Budget.Budget budget);
 }

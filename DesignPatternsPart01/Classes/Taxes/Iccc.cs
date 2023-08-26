@@ -10,7 +10,7 @@ public class Iccc : Tax
     {
     }
 
-    public override double Calculate(Budget budget)
+    public override double Calculate(Budget.Budget budget)
     {
         return budget.Value switch
         {

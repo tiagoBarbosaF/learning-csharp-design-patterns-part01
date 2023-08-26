@@ -1,4 +1,5 @@
 ﻿using DesignPatternsPart01.Classes;
+using DesignPatternsPart01.Classes.Budget;
 using DesignPatternsPart01.Interfaces;
 
 namespace DesignPatternsPart01;

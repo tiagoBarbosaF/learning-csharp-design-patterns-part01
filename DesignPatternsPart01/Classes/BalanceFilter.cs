@@ -1,4 +1,6 @@
-﻿namespace DesignPatternsPart01.Classes;
+﻿using DesignPatternsPart01.Classes.Accounts;
+
+namespace DesignPatternsPart01.Classes;
 
 public class BalanceFilter : Filter
 {

@@ -12,7 +12,7 @@ public class Icms : Tax
     {
     }
 
-    public override double Calculate(Budget budget)
+    public override double Calculate(Budget.Budget budget)
     {
         return budget.Value * 0.1 + CalculateOtherTax(budget);
     }

@@ -10,5 +10,5 @@ public class Iss : Tax
     {
     }
 
-    public override double Calculate(Budget budget) => budget.Value * 0.06 + CalculateOtherTax(budget);
+    public override double Calculate(Budget.Budget budget) => budget.Value * 0.06 + CalculateOtherTax(budget);
 }

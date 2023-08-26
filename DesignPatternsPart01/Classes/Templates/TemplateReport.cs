@@ -1,4 +1,6 @@
-﻿namespace DesignPatternsPart01.Classes.Templates;
+﻿using DesignPatternsPart01.Classes.Accounts;
+
+namespace DesignPatternsPart01.Classes.Templates;
 
 public abstract class TemplateReport
 {

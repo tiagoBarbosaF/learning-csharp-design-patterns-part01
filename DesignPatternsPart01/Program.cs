@@ -1,5 +1,4 @@
-﻿using DesignPatternsPart01.Classes;
-using DesignPatternsPart01.Classes.Taxes;
+﻿using DesignPatternsPart01.Classes.Accounts;
 
 namespace DesignPatternsPart01;
 
@@ -7,25 +6,18 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        var accounts = new List<Account>
-        {
-            new Account("Holder 1", 50, "111", "111-X", new DateTime(2022, 7, 1)),
-            new Account("Holder 2", 200_000, "211", "211-X", new DateTime(2023, 7, 15)),
-            new Account("Holder 3", 700_000, "111", "111-X", new DateTime(2022, 7, 25)),
-            new Account("Holder 4", 150, "131", "131-X", new DateTime(2023, 8, 5)),
-            new Account("Holder 5", 1_000_000, "113", "113-X", new DateTime(2023, 8, 10))
-        };
-
-        var compositeFilter = new CompositeFilter();
-        compositeFilter.AddFilter(new BalanceFilter(100, 500_000));
-        compositeFilter.AddFilter(new OpeningDateFilter(DateTime.Now));
-
-        var filteredAccounts = compositeFilter.FilterAccounts(accounts);
-
-        foreach (var account in filteredAccounts)
-        {
-            Console.WriteLine(
-                $"Holder: {account.Holder} - Balance: {account.Balance} - Opening Date: {account.OpeningDate}");
-        }
+        var account = new Account("Tiago", 0, "111", "111-x", new DateTime(2020, 4, 4));
+        Console.WriteLine($"Initial Balance: {account.Balance} - State Account: {account.CurrentState}");
+        account.Withdraw(50);
+        
+        Console.WriteLine($"After withdraw: {account.Balance} - State Account: {account.CurrentState}");
+        
+        // account.Withdraw(100);
+        //
+        // Console.WriteLine($"After withdraw again: {account.Balance} - State Account: {account.CurrentState}");
+        
+        account.Deposit(1000);
+        
+        Console.WriteLine($"After deposit: {account.Balance} - State Account: {account.CurrentState}");
     }
 }

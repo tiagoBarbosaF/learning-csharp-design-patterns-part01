@@ -12,8 +12,8 @@ public class Ikcv : TemplateConditionalTax
     {
     }
 
-    protected override bool MustUseMaxTax(Budget budget) => budget.Value > 500 && ItemGreaterThan100(budget);
-    private static bool ItemGreaterThan100(Budget budget) => budget.Items.Any(_ => budget.Value > 100);
-    protected override double MaxTax(Budget budget) => budget.Value * 0.1;
-    protected override double MinimalTax(Budget budget) => budget.Value * 0.06;
+    protected override bool MustUseMaxTax(Budget.Budget budget) => budget.Value > 500 && ItemGreaterThan100(budget);
+    private static bool ItemGreaterThan100(Budget.Budget budget) => budget.Items.Any(_ => budget.Value > 100);
+    protected override double MaxTax(Budget.Budget budget) => budget.Value * 0.1;
+    protected override double MinimalTax(Budget.Budget budget) => budget.Value * 0.06;
 }

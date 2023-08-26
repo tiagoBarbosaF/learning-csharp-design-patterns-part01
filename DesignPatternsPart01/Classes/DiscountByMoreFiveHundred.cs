@@ -6,7 +6,7 @@ public class DiscountByMoreFiveHundred : IDiscount
 {
     public IDiscount Next { get; set; }
 
-    public double Discounting(Budget budget)
+    public double Discounting(Budget.Budget budget)
     {
         if (budget.Value > 500)
             return budget.Value * 0.07;

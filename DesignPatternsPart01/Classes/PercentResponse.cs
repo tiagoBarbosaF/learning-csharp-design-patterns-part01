@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Design;
+using DesignPatternsPart01.Classes.Accounts;
 using DesignPatternsPart01.Classes.Enums;
 using DesignPatternsPart01.Interfaces;
 

@@ -15,6 +15,6 @@ public abstract class Tax
     }
 
 
-    protected double CalculateOtherTax(Budget budget) => OtherTax == null ? 0 : OtherTax.Calculate(budget);
-    public abstract double Calculate(Budget budget);
+    protected double CalculateOtherTax(Budget.Budget budget) => OtherTax == null ? 0 : OtherTax.Calculate(budget);
+    public abstract double Calculate(Budget.Budget budget);
 }
