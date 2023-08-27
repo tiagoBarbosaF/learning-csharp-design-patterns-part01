@@ -1,4 +1,5 @@
-﻿using DesignPatternsPart01.Classes.Accounts;
+﻿using DesignPatternsPart01.Classes.Invoices;
+using DesignPatternsPart01.Classes.Invoices.Builders;
 
 namespace DesignPatternsPart01;
 
@@ -6,18 +7,21 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        var account = new Account("Tiago", 0, "111", "111-x", new DateTime(2020, 4, 4));
-        Console.WriteLine($"Initial Balance: {account.Balance} - State Account: {account.CurrentState}");
-        account.Withdraw(50);
+        var builder = new InvoiceBuilder();
+        var itemBuilder = new InvoiceItemBuilder();
+
+        builder
+            .ForCompany("Test")
+            .WithCnpj("111111")
+            .With(itemBuilder.ItemName("item1").ItemValue(100).Build())
+            .With(itemBuilder.ItemName("item2").ItemValue(200).Build())
+            .CurrentDate(new DateTime(2023,10,10))
+            .WithObservations("test test");
+
+        var invoice = builder.Build();
         
-        Console.WriteLine($"After withdraw: {account.Balance} - State Account: {account.CurrentState}");
-        
-        // account.Withdraw(100);
-        //
-        // Console.WriteLine($"After withdraw again: {account.Balance} - State Account: {account.CurrentState}");
-        
-        account.Deposit(1000);
-        
-        Console.WriteLine($"After deposit: {account.Balance} - State Account: {account.CurrentState}");
+        Console.WriteLine(invoice);
+        Console.WriteLine(invoice.GrossValue);
+        Console.WriteLine(invoice.Taxes);
     }
 }
