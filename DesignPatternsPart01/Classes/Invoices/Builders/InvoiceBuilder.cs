@@ -1,4 +1,6 @@
-﻿namespace DesignPatternsPart01.Classes.Invoices.Builders;
+﻿using DesignPatternsPart01.Classes.Invoices.Interfaces;
+
+namespace DesignPatternsPart01.Classes.Invoices.Builders;
 
 public class InvoiceBuilder
 {
@@ -10,15 +12,24 @@ public class InvoiceBuilder
     private double _taxes;
     private readonly IList<InvoiceItem> _allItems = new List<InvoiceItem>();
 
-    public InvoiceBuilder()
+    private readonly IList<IActionAfterInvoice> _allActionsToExecute = new List<IActionAfterInvoice>();
+
+    public InvoiceBuilder(IList<IActionAfterInvoice> listActions)
     {
         Date = DateTime.Now;
+        _allActionsToExecute = listActions;
     }
 
     public Invoice Build()
     {
-        return new Invoice(CorporateName, Cnpj, Date, _totalValue, _taxes, _allItems, Observations);
+        var invoice = new Invoice(CorporateName, Cnpj, Date, _totalValue, _taxes, _allItems, Observations);
+
+        foreach (var action in _allActionsToExecute) action.Execute(invoice);
+
+        return invoice;
     }
+
+    public void AddAction(IActionAfterInvoice newAction) => _allActionsToExecute.Add(newAction);
 
     public InvoiceBuilder ForCompany(string corporateName)
     {
